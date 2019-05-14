@@ -1,0 +1,93 @@
+body, html{
+    height:100%;
+    margin:0;
+    font-size:16px;
+    font-family:"Lato", sans-serif;
+    font-weight:400;
+    line-height:1.8em;
+    color:#666;
+  }
+  
+  .first-pic, .pimg2, .pimg3{
+    position:relative;
+    opacity:0.70;
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+  
+    /*
+      fixed = parallax
+      scroll = normal
+    */
+    background-attachment: fixed;
+  }
+  
+  .first-pic{
+    background-image:url('./DSC_2669.jpg');
+    min-height: 100vh;
+  }
+  
+  .pimg2{
+    background-image:url('./DSC_2545.jpg');
+    min-height:400px;
+  }
+  
+  .pimg3{
+    background-image:url('https://flipwallpapers.com/wallpapers/4k-wallpaper-hd-resolution-For-desktop-Wallpaper.jpg');
+    min-height:400px;
+  }
+  
+  .section{
+    text-align:center;
+    padding:50px 80px;
+  }
+  
+  .section-light{
+    background-color:#f4f4f4;
+    color:#666;
+  }
+  
+  .section-dark{
+    background-color:#282e34;
+    color:#ddd;
+  }
+  .section-text{
+    letter-spacing:1px;
+  }
+  .ptext{
+    position:absolute;
+    top:50%;
+    width:100%;
+    text-align:center;
+    color:#000;
+    font-size:27px;
+    letter-spacing:8px;
+    text-transform:uppercase;
+  }
+  
+  .ptext .border{
+    border-radius: 25px;
+    background-color:#111;
+    color:rgb(146, 141, 141);
+    padding:20px;
+  }
+
+  .navBar {
+    display: flex;
+    flex-flow: row;
+    padding-right: 50px;
+  }
+
+  .contact {
+    padding-left: 1050px;
+  }
+
+  #nav {
+    color: white;
+  }
+  /* .ptext .border.trans{
+    background-color:transparent;
+    color: rgb(78, 74, 74)
+  } */
+  
+  

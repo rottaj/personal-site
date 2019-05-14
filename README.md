@@ -1,3 +1,3 @@
 #########Personal Site##############
 
-Stack: NodeJS, Express, React, Maybe Angular?
+Stack: NodeJS, Express, React, maybe Angular in the future?
