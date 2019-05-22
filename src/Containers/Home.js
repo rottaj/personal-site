@@ -1,9 +1,12 @@
 import React from 'react'
 import Repos from '../Components/Repos'
 import Navbar from '../Components/Navbar'
+import SocialMediaNav from '../Components/SocialNav'
+//import socketIO from 'socket.io-client'
 import '../Home.css'
 //import {Link} from 'react-router-dom'
  
+//const io = socketIO('localhost:3000')
 
 
 export default class Home extends React.Component {
@@ -15,36 +18,29 @@ export default class Home extends React.Component {
             <div class="ptext">
                 Jack Rotta
 
-                <p>Self Learning Software Developer</p>
+                <p>Software Developer.</p>
+                <SocialMediaNav/>
             </div>
           </div>
 
           <section class="section section-dark">
             <p className = "section-text">
-                <h2>Show me the code!</h2>
-                <Repos/>
+                About
+
+              <p>Currently Enrolled In Flatiron's immersive full-stack web development bootcamp</p>
             </p>
           </section>
 
           <div class="pimg2">
             <div class="ptext">
-                About
-
-                <p>Currently Enrolled In Flatiron's immersive full-stack web development bootcamp</p>
+              <h2>Pinned Projects</h2>
+        
             </div>
           </div>
 
-          <section class="section section-dark">
-            <p className = "section-text">
-                Solution Stack:
-                <p> Coming Soon! </p>
-            </p>
-          </section>
-
-
           <div class="first-pic">
             <div class="ptext">
-                Projects?
+                coming soon!
             </div>
           </div>
         </body>

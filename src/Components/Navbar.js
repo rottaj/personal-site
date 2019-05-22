@@ -1,17 +1,20 @@
 
 import React from 'react';
-import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from 'reactstrap';
+//import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from 'reactstrap';
+//import {BrowserRouter, Route} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default class Navbar extends React.Component {
 
   render() {
     return (
         <div className="navBar">
-          <ol className="jack" id="nav"><a href="#">Jack</a></ol>
-          <ol className="software" id="nav"><a href="#">Software</a></ol>
-          <ol className="about" id="nav"><a href="#">About</a></ol>
-          <ol className ="contact" id="nav"><a href="#">Contact</a></ol>
-      </div>
+          <ol className="jack" id="nav"><Link to="/">Jack</Link></ol>
+          <ol className="software" id="nav"><Link to="/code">Software</Link></ol>
+          <ol className="about" id="nav"><Link to="/me">About</Link></ol>
+          <ol className="blogs" id="nav"><Link to="/blogs">Blogs</Link></ol>
+          <ol className ="contact" id="nav"><Link to="/contact">Contact</Link></ol>
+        </div>
     );
   }
 }

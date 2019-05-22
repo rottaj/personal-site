@@ -12,20 +12,20 @@ export default class Repos extends React.Component {
         fetch('https://api.github.com/users/rottaj/repos')
             .then(res => {return res.json()})
             .then(data => {
-                console.log(data)
+                //console.log(data)
                 this.setState({...this.state.state, repos: data.map(x => this.filterData(x))})
             })
     }
 
     filterData = (repo) => {
-        console.log(repo)
+        //console.log(repo)
         return {url: repo.html_url, name: repo.full_name, language: repo.language}
     }
 
     
     render() {
         const { repos } = this.state
-        console.log(this.state)   
+        //console.log(this.state)   
 
         const columns = [{
             Header: 'Name',
@@ -43,13 +43,14 @@ export default class Repos extends React.Component {
 
         return (
             <div>
-                {console.log(this.state)}
+                <p>
                 <ReactTable
                     data={repos}
                     columns={columns}
 
                     defaultPageSize={10}
                 />
+                </p>
             </div>
         )
     }
