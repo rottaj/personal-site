@@ -1,8 +1,8 @@
 import React from 'react'
 const Message = (props) => (
         <div>
-            {console.log(props.messages)}   
-            {props.messages.map(msg => <p>{msg.msg_res}</p>)}
+            {console.log(props.message)} 
+            <p>{props.message.message}</p>
         </div>
 
 )

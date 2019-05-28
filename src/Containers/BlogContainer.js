@@ -17,6 +17,7 @@ export default class BlogContainer extends React.Component {
     componentDidMount() {
         this.fetchBlogs()
     }
+
     
     render() {
         console.log(this.state)

@@ -8,6 +8,10 @@ body, html{
     color:#666;
   }
   
+  .mainContainer {
+    width: 100vw,
+  }
+  
   .first-pic, .pimg2, .pimg3{
     position:relative;
     opacity:0.70;
@@ -28,14 +32,15 @@ body, html{
   }
   
   .pimg2{
-    background-image:url('./DSC_2545.jpg');
+    /* background-image:url('./DSC_2545.jpg'); */
+    min-height:400px;
+  }
+
+  .pimg3{
+    /*background-image:url('https://flipwallpapers.com/wallpapers/4k-wallpaper-hd-resolution-For-desktop-Wallpaper.jpg'); */
     min-height:400px;
   }
   
-  .pimg3{
-    background-image:url('https://flipwallpapers.com/wallpapers/4k-wallpaper-hd-resolution-For-desktop-Wallpaper.jpg');
-    min-height:400px;
-  }
   
   .section{
     text-align:center;
@@ -51,18 +56,37 @@ body, html{
     background-color:#282e34;
     color:#ddd;
   }
+
   .section-text{
     letter-spacing:1px;
   }
+
   .ptext{
-    position:absolute;
-    top:50%;
+    margin-top:25%;
     width:100%;
     text-align:center;
     color:#000;
-    font-size:27px;
+    font-size:26px;
     letter-spacing:8px;
     text-transform:uppercase;
+  }
+  
+  .ptext2 {
+    margin-left: 11%;
+    margin-top: 0%;
+    margin-bottom: -28%;
+    width:100%;
+    text-align:left;
+    color:#000;
+    font-size:16px;
+    letter-spacing:8px;
+    text-transform:uppercase;
+  }
+
+  .popRepos {
+    margin-left: 10%;
+    margin-top: 30%;
+    margin-bottom: -28%;
   }
   
   .ptext .border{

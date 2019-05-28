@@ -18,6 +18,7 @@ if(localStorage.getItem('userID')){
     io = socketIO('localhost:8080')
 }
 
+
 export default class MailForm extends React.Component {
 
 
@@ -47,6 +48,7 @@ export default class MailForm extends React.Component {
             return null
         }
     }
+
 
     render() {
         return (

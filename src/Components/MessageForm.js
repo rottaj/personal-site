@@ -13,7 +13,8 @@ export default class MessageForm extends React.Component {
 
     componentDidMount() {
         io.on('get.messages', (req) => {
-            this.setState({messages: [...this.state.messages, req.messageHistory]})
+            console.log(req.messageHistory, this.state.messages)
+            this.setState({messages: [...this.state.messages, ...req.messageHistory]})
         })
     }
 

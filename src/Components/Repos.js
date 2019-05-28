@@ -19,9 +19,15 @@ export default class Repos extends React.Component {
 
     filterData = (repo) => {
         //console.log(repo)
-        return {url: repo.html_url, name: repo.full_name, language: repo.language}
+        return {url: repo.html_url, name: repo.name, language: repo.language}
     }
 
+    styles = {
+        repo: {
+            'margin-left': '30px',
+            'margin-right': '-30px',
+        }
+    }
     
     render() {
         const { repos } = this.state
@@ -44,7 +50,7 @@ export default class Repos extends React.Component {
         return (
             <div>
                 <p>
-                <ReactTable
+                <ReactTable style={this.styles.repo}
                     data={repos}
                     columns={columns}
 

@@ -1,9 +1,12 @@
-const express = require('express')();
+//const express = require('express');
+//const http = require('http');
 const socketIO = require("socket.io");
 const cors = require('cors');
 const User = require('./src/models/User')
 const Message = require('./src/models/Message')
 const jwt = require('jsonwebtoken')
+
+//const app = express();
 
 const accountSid = 'ACffceed6a17f22a3e5cf34f8e171d6205';
 const authToken = '7cfe81fe74440e8eaa050d955a163ae9';    // dont keep these variables dumbass
@@ -49,15 +52,13 @@ const io = socketIO(8080, {
                     console.log(`new Message: ${msg.message} `)
                     console.log(`message uid: ${msg.userID}`)
                     console.log(`is Jack? : ${msg.isJack}`)
-                    res({msg_res: msg.message, id: msg.userID, isJack: msg.isJack})
+                    res({message: msg.message, id: msg.userID, isJack: msg.isJack})
                 })
         })
         console.log(this.userId)
         socket.emit('get.messages', {messageHistory: await Message.findAll({where: {userID: this.userId}})})
         
     }
-
-        //create socket for messages
         socket.on('session.new', (req, res) => {
             console.log(req)
             // don't fuck with this if your not tryna get charged
@@ -69,23 +70,20 @@ const io = socketIO(8080, {
                     console.log(`user email: ${user.email}`)
                     res(user.token)
                 })
-            //const session = req
-            //console.log(req.id) // id || sessionID ? 
-            //respond(session)
-            //const users = User.findAll()
-            //console.log(users)
-            //testing database
-    
         })
-    /*
-        socket.on('message.new', (req, res) => {
-            console.log(req)
-            Message.create({message: req.messageContent.message, userID: req.messageContent.userId})
-                .then( msg => {
-                    console.log(`new Message: ${msg.message} `)
-                    console.log(`message uid: ${msg.userID}`)
-                })
-        })
-    */
-
 })
+
+/*
+app.post('/sms', (req, res) => {
+    const twiml = new MessagingResponse();
+  
+    twiml.message('The Robots are coming! Head for the hills!');
+  
+    res.writeHead(200, {'Content-Type': 'text/xml'});
+    res.end(twiml.toString());
+  });
+  
+  http.createServer(app).listen(1337, () => {
+    console.log('Express server listening on port 1337');
+  });
+*/

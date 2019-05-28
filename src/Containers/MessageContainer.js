@@ -10,8 +10,8 @@ export default class MessageContainer extends React.Component {
         return (
             <div>
                 {console.log(this.props.messages)}
-                {this.props.messages.map(msg => <p>{msg.msg_res}</p>)}
-                <Message messages={this.props.messages}/>
+                {this.props.messages.map(msg => <Message message={msg}/>)}
+
             </div>
         )
     }
