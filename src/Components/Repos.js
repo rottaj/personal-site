@@ -19,7 +19,7 @@ export default class Repos extends React.Component {
 
     filterData = (repo) => {
         //console.log(repo)
-        return {url: repo.html_url, name: repo.name, language: repo.language}
+        return {url: repo.html_url, name: repo.name, language: repo.language, forks: repo.forks, size: repo.size, stars: repo.stargazers_count}
     }
 
     styles = {
@@ -40,12 +40,22 @@ export default class Repos extends React.Component {
           }, {
             Header: 'Description',
             accessor: 'description',
-            Cell: props => <span className='number'>{props.value}</span> // Custom cell components!
+            //Cell: props => <span className='number'>{props.value}</span> // Custom cell components!
           }, {
             id: 'Language', // Required because our accessor is not a string
             Header: 'Language',
             accessor: 'language'
-          }]
+          }, {
+              Header: 'Forks',
+              accessor: 'forks'
+          }, {
+              Header: 'Size',
+              accessor: 'size'
+          }, {
+              Header: 'Stars',
+              accessor: 'stars'
+          }
+        ]
 
         return (
             <div>

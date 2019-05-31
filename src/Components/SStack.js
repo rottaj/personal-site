@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from '@material-ui/core/Card'
+import Grid from '@material-ui/core/Grid'
 import { EditorFormatAlignCenter } from 'material-ui/svg-icons';
 
 export default class SoftwareStack extends React.Component {
@@ -25,6 +26,7 @@ export default class SoftwareStack extends React.Component {
     render() {
         return (
             <div>
+                <Grid item xs={12}>
                 <h1 style={this.styles.title}>Solution Stack</h1>
                 <div style={this.styles.div}>
                     <Card>
@@ -48,6 +50,7 @@ export default class SoftwareStack extends React.Component {
                         </div>
                     </Card>
                 </div>
+                </Grid>
             </div>
         )
     }

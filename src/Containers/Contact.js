@@ -14,7 +14,7 @@ export default class Contact extends React.Component {
             <div>
                 <Navbar/>
                 <MailForm/>
-                <MessageForm/>
+                {/*<MessageForm/>*/}
             </div>
         )
     }

@@ -9,7 +9,7 @@ body, html{
   }
   
   .mainContainer {
-    width: 100vw,
+    width: 100vw;
   }
   
   .first-pic, .pimg2, .pimg3{
@@ -28,7 +28,7 @@ body, html{
   
   .first-pic{
     background-image:url('./DSC_2669.jpg');
-    min-height: 100vh;
+    height: 100vh;
   }
   
   .pimg2{
@@ -62,20 +62,17 @@ body, html{
   }
 
   .ptext{
-    margin-top:25%;
-    width:100%;
+    margin-left: 5%;
+    padding-top: 22%;
+    width:95%;
     text-align:center;
-    color:#000;
+    color:white;
     font-size:26px;
     letter-spacing:8px;
     text-transform:uppercase;
   }
   
   .ptext2 {
-    margin-left: 11%;
-    margin-top: 0%;
-    margin-bottom: -28%;
-    width:100%;
     text-align:left;
     color:#000;
     font-size:16px;
@@ -84,9 +81,7 @@ body, html{
   }
 
   .popRepos {
-    margin-left: 10%;
-    margin-top: 30%;
-    margin-bottom: -28%;
+
   }
   
   .ptext .border{
@@ -97,14 +92,37 @@ body, html{
   }
 
   .navBar {
+    /*position: fixed; */
     display: flex;
     flex-flow: row;
-    padding-right: 50px;
+    padding-right: 0.1%;
   }
 
   .contact {
-    padding-left: 1050px;
+    padding-left: 70%;
   }
+/*
+  .gh {
+    width: 7%; height: 7%;
+    background: url(gh_icon);
+    background-repeat: no-repeat;
+  }
+  .ig {
+    width: 2350px; height: 75px;
+    background: url(ig_icon);
+    background-repeat: no-repeat;
+  }
+  .twitter {
+    width: 2350px; height: 75px;
+    background: url(tw_icon);
+    background-repeat: no-repeat
+  }
+  .sc {
+    background: url(sc_icon);
+    width: 2350px; height: 75px;
+    background-repeat: no-repeat
+  }
+  */
 
   #nav {
     color: white;

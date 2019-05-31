@@ -2,6 +2,7 @@ import React from 'react'
 import Repos from '../Components/Repos'
 import Navbar from '../Components/Navbar'
 import SStack from '../Components/SStack'
+import BottomSocialNav from '../Components/bSocialNav'
 
 export default class Software extends React.Component {
 
@@ -21,6 +22,7 @@ export default class Software extends React.Component {
             <div style={this.styles.container}><SStack/></div>
             <h2 style={this.styles.repos}>Github repositories</h2>
             <Repos/>
+            <BottomSocialNav/>
             </div>
         )
     }

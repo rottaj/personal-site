@@ -1,6 +1,8 @@
 import React from 'react'
 import Navbar from '../Components/Navbar'
 import Blog from '../Components/Blog'
+import Grid from '@material-ui/core/Grid'
+import BottomSocialNav from '../Components/bSocialNav'
 
 export default class BlogContainer extends React.Component {
 
@@ -23,8 +25,11 @@ export default class BlogContainer extends React.Component {
         console.log(this.state)
         return (
             <div>
+            <Grid item xs={12}>
                 <Navbar/>
                 {this.state.blogs.map(blog => <Blog blog={blog}/>) }           
+            </Grid>
+            <BottomSocialNav/>
             </div>
         )
     }

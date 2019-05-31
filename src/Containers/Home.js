@@ -3,6 +3,7 @@ import Repos from '../Components/Repos'
 import Navbar from '../Components/Navbar'
 import SocialMediaNav from '../Components/SocialNav'
 import PopRepos from './PopRepos'
+import BottomSocilNav from '../Components/bSocialNav'
 //import socketIO from 'socket.io-client'
 import '../Home.css'
 //import {Link} from 'react-router-dom'
@@ -14,8 +15,8 @@ export default class Home extends React.Component {
     render() {
       return(
           <div class="mainContainer">
+          <Navbar/>
             <div class="first-pic">
-            <Navbar/>
               <div class="ptext">
                   Jack Rotta
 
@@ -41,12 +42,13 @@ export default class Home extends React.Component {
               <PopRepos/>
               </div>
             </div>
-
+ 
             <div class="first-pic">
               <div class="ptext">
                   coming soon!
               </div>
             </div>
+            <BottomSocilNav/>
           </div>
 
 

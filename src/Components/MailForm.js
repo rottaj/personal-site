@@ -15,6 +15,7 @@ if(localStorage.getItem('userID')){
         }
     })
 } else {
+    console.log('else')
     io = socketIO('localhost:8080')
 }
 
@@ -22,9 +23,23 @@ if(localStorage.getItem('userID')){
 export default class MailForm extends React.Component {
 
 
+    styles = {
+        mainDiv: {
+            'text-align': 'center'
+        },
+        area: {
+            width: '100px',
+            height: '100px'
+        },
+        text: {
+            'font-size': '25px'
+        }
+    }
+
     sendState = (e) => {
 
         if(localStorage.userID === null || localStorage.userID === undefined) {
+            console.log('swag')
             io.emit('session.new', {userContent: {
                 first_name: e.target[0].value,
                 last_name: e.target[1].value,
@@ -52,25 +67,25 @@ export default class MailForm extends React.Component {
 
     render() {
         return (
-            <Form onSubmit={e => this.sendState(e)}>
+            <Form style={this.styles.mainDiv} onSubmit={e => this.sendState(e)}>
                 <Form.Field>
-                    <label>First Name:</label>
+                    <label style={this.styles.text}>First Name:</label>
                     <input placeholder='First Name' />
                 </Form.Field>
                 <Form.Field>
-                    <label>Last Name:</label>
+                    <label style={this.styles.text}>Last Name:</label>
                     <input placeholder='Last Name' />
                 </Form.Field>
                 <Form.Field>
-                    <label>Email:</label>
+                    <label style={this.styles.text}>Email:</label>
                     <input placeholder='swagonrepeat@swag.swag' />
                 </Form.Field>
                 <Form.Field>
-                    <label>Subject:</label>
+                    <label style={this.styles.text}>Subject:</label>
                     <input placeholder='contacting the sauce boss'/>
                 </Form.Field>
                 <Form.Field>
-                    <label>Message:</label>
+                    <label style={this.styles.text}>Message:</label>
                     <textarea placeholder='hallo'></textarea>
                 </Form.Field>
                 <Button type='submit'>Submit</Button>

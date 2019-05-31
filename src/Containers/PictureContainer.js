@@ -1,13 +1,17 @@
 import React from 'react'
 import Gallery from 'react-photo-gallery'
 import NavBar from '../Components/Navbar'
+import BottomSocialNav from '../Components/bSocialNav'
+const img1 = require('../IMG_0567.JPG')
+const img2 = require('../IMG_0650.JPG')
+
 
 export default class PictureContainer extends React.Component {
     
     /* popout the browser and maximize to see more columns! -> */
     photos = [
       {
-        src: "https://source.unsplash.com/2ShvY8Lf6l0/800x599",
+        src: img1,
         width: 4,
         height: 3
       },
@@ -17,7 +21,7 @@ export default class PictureContainer extends React.Component {
         height: 1
       },
       {
-        src: "https://source.unsplash.com/qDkso9nvCg0/600x799",
+        src: img2,
         width: 3,
         height: 4
       },
@@ -93,6 +97,7 @@ export default class PictureContainer extends React.Component {
             <div>
             <NavBar/>
             <Gallery photos={this.photos} direction={"column"} />
+            <BottomSocialNav/>
             </div>
           )
       }

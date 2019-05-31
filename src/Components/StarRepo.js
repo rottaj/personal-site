@@ -6,16 +6,15 @@ import Button from '@material-ui/core/Button';
 
 const styles = {
   card: {
-    margin: '16px',
+    margin: '10%',  // 16px
     minWidth: 275,
-    padding: '10px'
+    padding: '50%'   // 10px
   },
   title: {
     fontSize: 14,
     'text-align': 'center'
   },
   pos: {
-    marginBottom: 5,
     padding: '30px'
   },
 };
@@ -23,18 +22,20 @@ const styles = {
 
 const StarRepo = (props) => (
     <div>
-        {console.log(props.repo.name)}
+        {console.log(props.repo)}
+        <a href={props.repo.html_url}>
         <Card className="starRepo" style={{ ...styles.card,  ...styles.pos}}>
             <CardContent style={styles.title}>
                 {props.repo.name}
             </CardContent>
             <CardContent>
-                {props.repo.language}
+                Language: {props.repo.language}
             </CardContent>
             <CardContent>
-              
+              {props.repo.description}
             </CardContent>
         </Card>
+        </a>
     </div>
 )
 

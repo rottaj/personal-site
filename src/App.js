@@ -15,7 +15,6 @@ export default class App extends React.Component {
       <BrowserRouter>
         <Route exact path = '/' component = {Home}/>
         <Route exact path = '/code' component = {Software}/>
-        <Route exact path = '/me' component = {About}/>
         <Route exact path = '/blogs' component = {Blogs}/>
         <Route exact path = '/myLife' component = {PictureContainer}/>
         <Route exact path = '/contact' component = {Contact}/>
