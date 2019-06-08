@@ -5,6 +5,8 @@ import MessageContainer from '../Containers/MessageContainer'
 
 const io = socketIO('localhost:8080')
 
+ // Work in progress... provides real time messaging
+
 export default class MessageForm extends React.Component {
 
     state = {

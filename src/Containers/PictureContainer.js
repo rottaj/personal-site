@@ -91,12 +91,23 @@ export default class PictureContainer extends React.Component {
         height: 3
       }
     ];
+
+    styles = {
+      header: {
+        width: '100%'
+      },
+      main: {
+        'margin': '5%'
+      }
+    }
     
       render() {
           return (
-            <div>
+            <div style={this.styles.header}>
             <NavBar/>
-            <Gallery photos={this.photos} direction={"column"} />
+            <div style={this.styles.main}>
+              <Gallery photos={this.photos} direction={"column"} />
+            </div>
             <BottomSocialNav/>
             </div>
           )

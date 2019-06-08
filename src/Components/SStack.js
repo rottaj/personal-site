@@ -16,8 +16,10 @@ export default class SoftwareStack extends React.Component {
             margin: '10px'
         },
         div: {
-            'margin-top': '90px',
-            'margin-left': '115px',
+            'margin-top': '3%',
+            'margin-left': '13%',
+            'margin-right': '7%',
+            'margin-bottom': '3%',
             display: 'flex',
             'flex-flow': 'row wrap',
         }

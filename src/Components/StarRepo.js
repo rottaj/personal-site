@@ -1,14 +1,17 @@
 import React from 'react'
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
+import CardHeader from '@material-ui/core/CardHeader'
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
+import Typography from 'material-ui/styles/typography';
 
 const styles = {
   card: {
     margin: '10%',  // 16px
     minWidth: 275,
-    padding: '50%'   // 10px
+    padding: '50%',   // 10px
+    'text-decoration': 'none'
   },
   title: {
     fontSize: 14,
@@ -25,7 +28,7 @@ const StarRepo = (props) => (
         {console.log(props.repo)}
         <a href={props.repo.html_url}>
         <Card className="starRepo" style={{ ...styles.card,  ...styles.pos}}>
-            <CardContent style={styles.title}>
+            <CardContent component="h2">
                 {props.repo.name}
             </CardContent>
             <CardContent>

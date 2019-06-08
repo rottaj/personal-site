@@ -1,11 +1,11 @@
 import React from 'react'
-import Navbar from '../Components/Navbar'
+import NavBar from '../Components/Navbar'
 
 export default class About extends React.Component {
     render() {
         return (
             <div>
-                <Navbar/>
+                <NavBar/>
                 about page
             </div>
         )

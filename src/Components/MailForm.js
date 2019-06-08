@@ -1,6 +1,6 @@
 import React from 'react'
-import { Button, Form } from 'semantic-ui-react'
 import socketIO from 'socket.io-client'
+import { Button, Form, FormGroup, Label, Input, FormText,  } from 'reactstrap';
 
 let io;
 if(localStorage.getItem('userID')){
@@ -36,6 +36,7 @@ export default class MailForm extends React.Component {
         }
     }
 
+
     sendState = (e) => {
 
         if(localStorage.userID === null || localStorage.userID === undefined) {
@@ -67,29 +68,28 @@ export default class MailForm extends React.Component {
 
     render() {
         return (
-            <Form style={this.styles.mainDiv} onSubmit={e => this.sendState(e)}>
-                <Form.Field>
-                    <label style={this.styles.text}>First Name:</label>
-                    <input placeholder='First Name' />
-                </Form.Field>
-                <Form.Field>
-                    <label style={this.styles.text}>Last Name:</label>
-                    <input placeholder='Last Name' />
-                </Form.Field>
-                <Form.Field>
-                    <label style={this.styles.text}>Email:</label>
-                    <input placeholder='swagonrepeat@swag.swag' />
-                </Form.Field>
-                <Form.Field>
-                    <label style={this.styles.text}>Subject:</label>
-                    <input placeholder='contacting the sauce boss'/>
-                </Form.Field>
-                <Form.Field>
-                    <label style={this.styles.text}>Message:</label>
-                    <textarea placeholder='hallo'></textarea>
-                </Form.Field>
-                <Button type='submit'>Submit</Button>
+
+            <Form style={this.styles.mainDiv}>
+                <FormGroup>
+                    <Label for="contactName">Name</Label>
+                    <Input type="name" name="name" id="contactName" placeholder="with a placeholder" />
+                </FormGroup>
+                <FormGroup>
+                    <Label for="contactEmail">Email</Label>
+                    <Input type="email" name="email" id="contactName" placeholder="password placeholder" />
+                </FormGroup>
+                <FormGroup>
+                    <Label for="contactSubject">Subject</Label>
+                    <Input type="subject" name="subject" id="contactSubject" placeholder="password placeholder" />
+                </FormGroup>
+                <FormGroup>
+                    <Label for="contactMessage">Message</Label>
+                    <Input type="message" name="message" id="contactMessage" placeholder="password placeholder" />
+                </FormGroup>
+            
             </Form>
+
         )
     }
 }
+

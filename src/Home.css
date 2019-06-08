@@ -34,6 +34,7 @@ body, html{
   .pimg2{
     /* background-image:url('./DSC_2545.jpg'); */
     min-height:400px;
+    background-image: grey;
   }
 
   .pimg3{
@@ -62,9 +63,9 @@ body, html{
   }
 
   .ptext{
-    margin-left: 5%;
+    /*margin-left: 5%;  */
     padding-top: 22%;
-    width:95%;
+    width:100%;
     text-align:center;
     color:white;
     font-size:26px;
@@ -78,10 +79,11 @@ body, html{
     font-size:16px;
     letter-spacing:8px;
     text-transform:uppercase;
+    /*background-color: grey; */
   }
 
   .popRepos {
-
+    background-color: grey;
   }
   
   .ptext .border{
@@ -99,7 +101,7 @@ body, html{
   }
 
   .contact {
-    padding-left: 70%;
+    padding-left: 50%;
   }
 /*
   .gh {

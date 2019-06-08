@@ -7,6 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 
 const style = {
     "padding-bottom": '25px',
+    'text-decoration': 'none',
     card: {
         maxWidth: 400,
       },
@@ -25,10 +26,10 @@ const style = {
 
 const Blog = (props) => (
     <div className="blog" style={style}>
-        {console.log(props)}
+        { /* console.log(props) */}
         <a href={props.blog.link}>
         <Card > 
-            {console.log(props.blog)}
+            {/*console.log(props.blog) */}
             <h3>{props.blog.title}</h3>
             <p>Categories: {props.blog.categories.map(cat => cat)}</p>
         </Card>

@@ -24,8 +24,10 @@ export default class Repos extends React.Component {
 
     styles = {
         repo: {
-            'margin-left': '30px',
-            'margin-right': '-30px',
+            //'margin-left': '30px',
+            //'margin-right': '-20px',
+            'margin-left': '7%',
+            'margin-right': '7%',
         }
     }
     
