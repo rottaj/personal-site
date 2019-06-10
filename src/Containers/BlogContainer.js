@@ -14,7 +14,8 @@ export default class BlogContainer extends React.Component {
         container: {
             //'margin-left': '3%',
             //'margin-right': '3%'
-            margin: '5%'
+            margin: '5%',
+            'margin-top': '10%'
         }
     }
 

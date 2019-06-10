@@ -97,7 +97,8 @@ export default class PictureContainer extends React.Component {
         width: '100%'
       },
       main: {
-        'margin': '5%'
+        'margin': '5%',
+        'margin-top': '10%'
       }
     }
     

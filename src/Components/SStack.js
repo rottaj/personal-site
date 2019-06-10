@@ -8,8 +8,10 @@ export default class SoftwareStack extends React.Component {
     styles = {
         card: {
             'margin-left': '16px',
+            'text-align': 'center',
             minWidth: 275,
             padding: '10px',
+
         },
         title: {
             'margin-top': '0px',
@@ -41,7 +43,7 @@ export default class SoftwareStack extends React.Component {
                         <div style={this.styles.card}>
                             <h3>Backend</h3>
                             <h5>NodeJS and Express.</h5>
-                            <h5>JSON Web Tokens for security</h5>
+                            <h5>JSON Web Tokens for session-based authentication</h5>
                         </div>
                     </Card>
                     <Card>

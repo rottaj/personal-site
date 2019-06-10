@@ -17,13 +17,14 @@ export default class Software extends React.Component {
         },
         main: {
             //'background-color': 'grey'
+            'margin-top': '8%'
         }
 
     }
 
     render() {
         return (
-            <div>
+            <div style={this.styles.main}>
             <NavBar/>
             <div style={this.styles.container}><SStack/></div>
             <h2 style={this.styles.repos}>Github repositories</h2>

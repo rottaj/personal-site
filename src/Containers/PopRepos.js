@@ -24,7 +24,7 @@ export default class PopRepos extends React.Component {
         card: {
             display: 'flex',
             'flex-flow': 'row wrap',
-            'text-align': 'center'
+            'text-align': 'center',
         }
     }
 
