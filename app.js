@@ -1,3 +1,7 @@
+/*   
+    Refactor code to migrate to AWS
+*/
+/*
 //const express = require('express');
 //const http = require('http');
 const socketIO = require("socket.io");
@@ -27,7 +31,7 @@ sendSmS = (msg, user) => {
 } // dont enable if you dont wanna be charged scrub
 
 */
-
+/*
 let transporter = nodemailer.createTransport({
   host: "smtp.ethereal.email",
   port: 587,
@@ -102,3 +106,4 @@ const io = socketIO(8080, {
                 })
         })
 })
+*/
