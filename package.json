@@ -2,6 +2,7 @@
   "name": "personal-site",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://rottaj.github.io/personal-site/",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "bricks.js": "^1.8.0",
@@ -39,6 +40,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
