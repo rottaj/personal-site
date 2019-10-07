@@ -33,8 +33,7 @@
     "sequelize-cli": "^5.5.1",
     "socket.io": "^2.3.0",
     "socket.io-client": "^2.3.0",
-    "twilio": "^3.35.1",
-    "homepage": "https://rottaj.github.io/personal-site"
+    "twilio": "^3.35.1"
   },
   "scripts": {
     "start": "react-scripts start",
